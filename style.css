@@ -1,0 +1,114 @@
+body {
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: roboto;
+    background: hsla(0, 0%, 100%, 0.75);
+    ;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#cars p {
+    padding-top: 40px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.cars {
+    padding: 30px 40px;
+    width: 250px;
+    height: 450px;
+}
+
+.cars h1 {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+}
+
+.sedans {
+    background: hsl(31, 77%, 52%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+button {
+    background: hsl(0, 0%, 95%);
+    padding: 10px 25px;
+    border: 1px transparent solid;
+    font-weight: 700;
+    border-radius: 25px;
+    margin-top: 130px;
+}
+
+.sedans button:hover,
+.suvs button:hover,
+.luxury button:hover {
+    background: transparent;
+    border: 2px hsl(0, 0%, 95%) solid;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.sedans button {
+    color: hsl(31, 77%, 52%)
+}
+
+.suvs {
+    background: hsl(184, 100%, 22%);
+}
+
+.suvs button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background: hsl(179, 100%, 13%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 501px) {
+    #cars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        margin: auto;
+        width: 80vw;
+        height: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    #cars {
+        display: block;
+        margin: auto;
+    }
+    .sedans {
+        background: hsl(31, 77%, 52%);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .luxury {
+        background: hsl(179, 100%, 13%);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (min-width: 850px) {
+    #cars {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 80px auto;
+    }
+}
